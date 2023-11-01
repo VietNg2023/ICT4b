@@ -22,7 +22,12 @@ def main():
         print(func_5)
         print(func_6)
         print()
-        a = int(input('What did you choose: '))
+        while True:
+            try: 
+                a = int(input('What did you choose: '))
+                break
+            except ValueError:
+                print("Invalid input. Please input an integer")
         if a == 1:
             print('Program stop')
             break
